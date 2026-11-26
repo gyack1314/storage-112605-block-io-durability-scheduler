@@ -1,0 +1,13 @@
+{"at":0,"kind":"device","record":{"depth":1,"max_span":2}}
+{"at":0,"kind":"tenant","record":{"name":"interactive","share":1}}
+{"at":0,"kind":"tenant","record":{"name":"batch","share":1}}
+{"at":1,"kind":"io","record":{"tenant":"interactive","id":"old","type":"read","start":0,"count":2,"deadline":3}}
+{"at":2,"kind":"pump","record":{}}
+{"at":3,"kind":"io","record":{"tenant":"batch","id":"b","type":"read","start":4,"count":2,"deadline":20}}
+{"at":4,"kind":"io","record":{"tenant":"interactive","id":"r","type":"read","start":8,"count":2,"deadline":10}}
+{"at":5,"kind":"cancel","record":{"id":"old"}}
+{"at":6,"kind":"pump","record":{}}
+{"at":7,"kind":"inspect","record":{}}
+{"at":8,"kind":"done","record":{"id":"old","type":"read","start":0,"count":2,"result":"ok","text":"AB","attempt":1}}
+{"at":9,"kind":"pump","record":{}}
+{"at":10,"kind":"inspect","record":{}}
